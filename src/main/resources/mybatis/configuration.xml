@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+	PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!-- <configuration>
+	<typeAliases>
+		<typeAlias alias="BoardVo" type="com.commit.repository.vo.BoardVo"/>
+		<typeAlias alias="UserVo" type="com.commit.repository.vo.UserVo"/>
+		<typeAlias alias="CareerVo" type="com.commit.repository.vo.CareerVo"/>
+		<typeAlias alias="DegreeVo" type="com.commit.repository.vo.DegreeVo"/>
+		<typeAlias alias="FamilyVo" type="com.commit.repository.vo.FamilyVo"/>
+		<typeAlias alias="PhotoVo" type="com.commit.repository.vo.PhotoVo"/>
+		<typeAlias alias="ProfileVo" type="com.commit.repository.vo.ProfileVo"/>
+		<typeAlias alias="ReviewVo" type="com.commit.repository.vo.ReviewVo"/>
+		<typeAlias alias="MypageVo" type="com.commit.repository.vo.MypageVo"/>
+	</typeAliases>
+	<mappers>
+		<mapper resource="mybatis/mappers/board.xml" />
+		<mapper resource="mybatis/mappers/user.xml" />
+		<mapper resource="mybatis/mappers/career.xml" />
+		<mapper resource="mybatis/mappers/degree.xml" />
+		
+		<mapper resource="mybatis/mappers/family.xml" />
+		<mapper resource="mybatis/mappers/photo.xml" />
+		<mapper resource="mybatis/mappers/profile.xml" />
+		<mapper resource="mybatis/mappers/review.xml" />
+		<mapper resource="mybatis/mappers/mypage.xml" />
+	</mappers>
+</configuration> -->	
+ 
+
