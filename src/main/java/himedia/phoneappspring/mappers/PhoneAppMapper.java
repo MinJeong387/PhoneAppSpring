@@ -29,5 +29,5 @@ public interface PhoneAppMapper {
 	List<PhoneAppVo> selectByName(String name);		//	연락처 이름 검색
 	
 //	<select id="selectByPhonenumber" parameterType="PhoneAppVo" resultType="PhoneAppVo">
-	List<PhoneAppVo> selectByPhonenumber(String phoneNumber);	//	연락처 전화번호 검색
+	List<PhoneAppVo> selectByPhonenumber(String phone_number);	//	연락처 전화번호 검색
 }
