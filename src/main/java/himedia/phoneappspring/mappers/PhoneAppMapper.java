@@ -22,4 +22,9 @@ public interface PhoneAppMapper {
 //	<delete id="deleteNumber" parameterType="int">
 	int deleteNumber(Integer id);
 
+//	<select id="selectByName" parameterType="PhoneAppVo" resultType="PhoneAppVo">
+	List<PhoneAppVo> selectByName(String name);
+	
+//	<select id="selectByPhonenumber" parameterType="PhoneAppVo" resultType="PhoneAppVo">
+	List<PhoneAppVo> selectByPhonenumber(String phoneNumber);
 }

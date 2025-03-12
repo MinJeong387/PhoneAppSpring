@@ -41,5 +41,15 @@ public class PhoneAppService {
 	public int deleteNumber(Integer id) {
 		return phoneAppMapper.deleteNumber(id);
 	}
+	
+	// 이름으로 연락처 검색
+	public List<PhoneAppVo> selectByName(String name) {
+		return phoneAppMapper.selectByName(name);
+	}
+	
+	// 전화번호로 연락처 검색
+	public List<PhoneAppVo> selectByPhonenumber(String phoneNumber) {
+		return phoneAppMapper.selectByPhonenumber(phoneNumber);
+	}
 
 }

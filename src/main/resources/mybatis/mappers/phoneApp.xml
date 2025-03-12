@@ -25,7 +25,21 @@
 	</update>
 	
 	<!-- 연락처 삭제 -->
-	<delete id="deleteUser" parameterType="Integer"> 
+	<delete id="deleteNumber" parameterType="Integer"> 
 	DELETE FROM userInfo WHERE id=#{id} 
 	</delete>
+	
+	<!-- 이름으로 연락처 검색 -->
+	<select id="selectByName" parameterType="PhoneAppVo" resultType="PhoneAppVo"> 
+	SELECT * 
+	FROM userInfo
+	WHERE name LIKE CONCAT('%', #{name}, '%');
+	</select>
+	
+	<!-- 전화번호로 연락처 검색 -->
+	<select id="selectByPhonenumber" parameterType="PhoneAppVo" resultType="PhoneAppVo"> 
+	SELECT * 
+	FROM userInfo
+	WHERE phone_number LIKE CONCAT('%', #{name}, '%');
+	</select>
 </mapper>

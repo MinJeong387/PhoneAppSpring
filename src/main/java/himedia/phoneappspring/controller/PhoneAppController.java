@@ -38,14 +38,14 @@ public class PhoneAppController {
     }
     
     // POST: /api/phoneApp - 새 전화번호 추가
-    @PostMapping
+    @PostMapping("/insert")
     public ResponseEntity<PhoneAppVo> addNumber(@RequestBody PhoneAppVo phoneVo) {
         PhoneAppVo addedPhoneVo = phoneAppService.insertNumber(phoneVo);
         return ResponseEntity.ok(addedPhoneVo);
     }
     
     // PUT: /api/phoneApp/{id} - 기존 전화번호 수정
-    @PutMapping("/{id}")
+    @PutMapping("/update/{id}")
     public ResponseEntity<PhoneAppVo> updateNumber(@RequestBody PhoneAppVo phoneVo, 
             @PathVariable("id") Integer id) {
     	phoneVo.setId(id); // 요청 파라미터로 받은 id 설정
@@ -54,11 +54,24 @@ public class PhoneAppController {
     }
     
     // DELETE: /api/phoneApp/{id} - 전화번호 삭제
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<Void> deleteNumber(@PathVariable("id") Integer id) {
         phoneAppService.deleteNumber(id);
         return ResponseEntity.noContent().build(); // 삭제 후 아무 것도 반환하지 않음
     }
+    
+	// GET: /api/phoneApp/{name} - 이름으로 연락처 검색하기
+    @GetMapping("/search/{name}")
+    public ResponseEntity<List<PhoneAppVo>> selectByName(@PathVariable String name) {
+        List<PhoneAppVo> phoneVo = phoneAppService.selectByName(name);
+        return ResponseEntity.ok(phoneVo);
+    }
+    
+	// GET: /api/phoneApp/{phonenumber} - 전화번호로 연락처 검색하기
+    @GetMapping("/search/{phonenumber}")
+    public ResponseEntity<List<PhoneAppVo>> selectByPhonenumber(@PathVariable String phonenumber) {
+        List<PhoneAppVo> phoneVo = phoneAppService.selectByPhonenumber(phonenumber);
+        return ResponseEntity.ok(phoneVo);
+    }
 	
 }
-// 호정 반영
