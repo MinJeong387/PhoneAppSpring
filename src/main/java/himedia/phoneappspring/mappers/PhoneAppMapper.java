@@ -2,14 +2,15 @@ package himedia.phoneappspring.mappers;
 
 import java.util.List;
 
-import com.commit.repository.vo.BoardVo;
+import himedia.phoneappspring.repository.vo.PhoneAppVo;
 
 
-public interface BoardMapper {
-//	<select id="selectAllItems" resultType="boardVo">
-	List<BoardVo> selectAllItems();
+public interface PhoneAppMapper {
+
+//	<select id="selectAllItems" resultType="phoneAppVo">
+	List<PhoneAppVo> selectAllItems();	// 조회
 	
-//	<update id="updateItem" parameterType="boardVo">
-	int updateItem(BoardVo item);
+//	<insert id="insertItem" parameterType="PhoneAppVo">
+	int insertItem(PhoneAppVo item);	// 추가
 
 }

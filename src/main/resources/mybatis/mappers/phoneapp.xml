@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="himedia.phoneappspring.mappers.PhoneAppMapper">
+	
+	<!-- SELECT: GET -->
+	<select id="selectAllItems" resultType="phoneAppVo">
+	SELECT id,
+		 name,
+		 phone_number as phoneNumber,
+		 email, 
+		 nickname,
+		 memo
+	FROM userInfo
+	</select>
+
+	<!-- INSERT: POST -->
+ 	<insert id="insertItem" parameterType="phoneAppVo">	
+	INSERT INTO userinfo (name, phone_number, email, nickname, memo)
+	VALUES (#{name}, #{phoneNumber}, #{email}, #{nickname}, #{memo})
+	</insert>
+	 
+</mapper>

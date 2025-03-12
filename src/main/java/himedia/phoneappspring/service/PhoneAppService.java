@@ -5,26 +5,25 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import himedia.phoneappspring.mappers.BoardMapper;
-import himedia.phoneappspring.repository.vo.BoardVo;
+import himedia.phoneappspring.mappers.PhoneAppMapper;
+import himedia.phoneappspring.repository.vo.PhoneAppVo;
 
 
 @Service
-public class BoardService {
+public class PhoneAppService {
 	
 	@Autowired
-	private BoardMapper boardMapper;
+	private PhoneAppMapper phoneAppMapper;
 	
-	//	목록 불러오기
-	public List<BoardVo> selectAllItems() {
-		List<BoardVo> items = 
-				boardMapper.selectAllItems();
+	//	목록 조회
+	public List<PhoneAppVo> selectAllItems() {
+		List<PhoneAppVo> items = phoneAppMapper.selectAllItems(); 
 		return items;
 	}
 	
-	//	수정
-	public BoardVo updateItem(BoardVo item) {
-		boardMapper.updateItem(item);
+	//	추가
+	public PhoneAppVo insertItem(PhoneAppVo item) {
+		phoneAppMapper.insertItem(item);
 		return item;
 	}
 

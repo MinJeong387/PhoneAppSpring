@@ -11,17 +11,38 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class BoardVo {
+public class PhoneAppVo {
 
+	
 	//	ID
-	Integer id;
-	//	유저ID
-	Integer userId;
-	//	제목
-	String 	title;
-	//	계획
-	String 	plan;
-	//	소개
-	String 	introduction;
+	private Integer id;
+	
+	//	이름
+	private String name;
+	
+	//	전화번호
+	private String phoneNumber;
+	
+	//	이메일
+	private String email;
+	
+	//	닉네임
+	private String nickname;
+
+	//	메모
+	private String memo;
+
+	
+	public PhoneAppVo(String name, String phoneNumber, String email, String nickname, String memo) {
+		super();
+		this.name = name;
+		this.phoneNumber = phoneNumber;
+		this.email = email;
+		this.nickname = nickname;
+		this.memo = memo;
+	}
+	
+	
+	
 	 
 }
