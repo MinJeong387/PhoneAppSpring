@@ -2,14 +2,14 @@
 <!DOCTYPE configuration
 	PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+	
 <configuration>
 	<typeAliases>
-		<typeAlias alias="PhoneAppVo" type="himedia.phoneappspring.repository.vo.PhoneAppVo"/>
-
+		<typeAlias alias="PhoneAppVo"
+			type="himedia.phoneappspring.repository.vo.PhoneAppVo" />
 	</typeAliases>
 	<mappers>
-		<mapper resource="mybatis/mappers/phoneapp.xml" />
-
+		<mapper resource="mybatis/mappers/phoneApp.xml" />
 	</mappers>
 </configuration>
  

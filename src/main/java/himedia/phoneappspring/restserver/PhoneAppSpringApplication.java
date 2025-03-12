@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @MapperScan(basePackages = "himedia.phoneappspring.mappers")
-@ComponentScan(basePackages = { "himedia.phoneappspring" })
+@ComponentScan(basePackages = "himedia.phoneappspring")
 
 public class PhoneAppSpringApplication {
 

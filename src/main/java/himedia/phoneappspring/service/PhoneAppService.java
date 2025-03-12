@@ -14,17 +14,32 @@ public class PhoneAppService {
 	
 	@Autowired
 	private PhoneAppMapper phoneAppMapper;
-	
-	//	목록 조회
-	public List<PhoneAppVo> selectAllItems() {
-		List<PhoneAppVo> items = phoneAppMapper.selectAllItems(); 
-		return items;
+
+	// 전화번호 목록 불러오기
+	public List<PhoneAppVo> selectAllNumbers() {
+		return phoneAppMapper.selectAllNumbers();
 	}
-	
-	//	추가
-	public PhoneAppVo insertItem(PhoneAppVo item) {
-		phoneAppMapper.insertItem(item);
-		return item;
+
+	// 전화번호 하나 선택
+	public PhoneAppVo selectNumberById(Integer id) {
+		return phoneAppMapper.selectNumberById(id);
+	}
+
+	// 전화번호 추가
+	public PhoneAppVo insertNumber(PhoneAppVo phoneVo) {
+		phoneAppMapper.insertNumber(phoneVo);
+		return phoneAppMapper.selectNumberById(phoneVo.getId());
+	}
+
+	// 전화번호 수정
+	public PhoneAppVo updateNumber(PhoneAppVo phoneVo) {
+		phoneAppMapper.updateNumber(phoneVo);
+		return phoneVo;
+	}
+
+	// 전화번호 삭제
+	public int deleteNumber(Integer id) {
+		return phoneAppMapper.deleteNumber(id);
 	}
 
 }

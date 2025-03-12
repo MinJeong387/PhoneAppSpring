@@ -13,36 +13,20 @@ import lombok.ToString;
 @ToString
 public class PhoneAppVo {
 
+	private Integer id;			// 연락처 고유번호
+	private String name;		// 이름
+	private String phone_number;	// 전화번호
+	private String email;		// 이메일
+	private String nickname;	// 닉네임
+	private String memo;		// 메모
 	
-	//	ID
-	private Integer id;
-	
-	//	이름
-	private String name;
-	
-	//	전화번호
-	private String phoneNumber;
-	
-	//	이메일
-	private String email;
-	
-	//	닉네임
-	private String nickname;
-
-	//	메모
-	private String memo;
-
-	
-	public PhoneAppVo(String name, String phoneNumber, String email, String nickname, String memo) {
+	public PhoneAppVo(String name, String phone_number, String email, String nickname, String memo) {
 		super();
 		this.name = name;
-		this.phoneNumber = phoneNumber;
+		this.phone_number = phone_number;
 		this.email = email;
 		this.nickname = nickname;
 		this.memo = memo;
 	}
-	
-	
-	
 	 
 }

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="himedia.phoneappspring.mappers.PhoneAppMapper">
+	<!-- 전체 연락처 조회 -->
+	<select id="selectAllNumbers" resultType="PhoneAppVo"> 
+	SELECT * FROM userInfo ORDER BY name, phone_number 
+	</select>
+	
+	<!-- 특정 연락처 조회 -->
+	<select id="selectNumberById" parameterType="Integer" resultType="PhoneAppVo"> 
+		SELECT * FROM userInfo WHERE id=#{id} 
+	</select>
+		
+	<!-- 연락처 추가 -->
+	<insert id="insertNumber" parameterType="PhoneAppVo"> 
+	INSERT INTO userInfo (name, phone_number, email, nickname, memo) 
+	VALUES (#{name}, #{phone_number}, #{email}, #{nickname}, #{memo}) 
+	</insert>
+	
+	<!-- 연락처 수정 -->
+	<update id="updateNumber" parameterType="PhoneAppVo"> 
+	UPDATE userInfo SET name=#{name}, phone_number=#{phone_number}, email=#{email}, nickname=#{nickname}, memo=#{memo} 
+	WHERE id=#{id} 
+	</update>
+	
+	<!-- 연락처 삭제 -->
+	<delete id="deleteUser" parameterType="Integer"> 
+	DELETE FROM userInfo WHERE id=#{id} 
+	</delete>
+</mapper>
