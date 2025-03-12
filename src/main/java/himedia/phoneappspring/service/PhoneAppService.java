@@ -15,29 +15,36 @@ public class PhoneAppService {
 	@Autowired
 	private PhoneAppMapper phoneAppMapper;
 
-	// 전화번호 목록 불러오기
+	// 전체 연락처 조회
 	public List<PhoneAppVo> selectAllNumbers() {
 		return phoneAppMapper.selectAllNumbers();
 	}
 
-	// 전화번호 하나 선택
+	// 특정 연락처 조회
 	public PhoneAppVo selectNumberById(Integer id) {
 		return phoneAppMapper.selectNumberById(id);
 	}
 
-	// 전화번호 추가
+	// 연락처 추가
 	public PhoneAppVo insertNumber(PhoneAppVo phoneVo) {
 		phoneAppMapper.insertNumber(phoneVo);
 		return phoneAppMapper.selectNumberById(phoneVo.getId());
 	}
+	
+	//	기존 연락처 수정
+	public PhoneAppVo updateNumberPartially(Integer id, PhoneAppVo phoneVo) {
+		phoneVo.setId(id);
+		phoneAppMapper.updateNumberPartially(phoneVo);
+		return phoneAppMapper.selectNumberById(id);
+	}
 
-	// 전화번호 수정
+	// 연락처 수정
 	public PhoneAppVo updateNumber(PhoneAppVo phoneVo) {
 		phoneAppMapper.updateNumber(phoneVo);
 		return phoneVo;
 	}
 
-	// 전화번호 삭제
+	// 연락처 삭제
 	public int deleteNumber(Integer id) {
 		return phoneAppMapper.deleteNumber(id);
 	}

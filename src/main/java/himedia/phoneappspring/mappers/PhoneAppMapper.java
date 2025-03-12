@@ -8,23 +8,26 @@ import himedia.phoneappspring.repository.vo.PhoneAppVo;
 public interface PhoneAppMapper {
 
 //	<select id="selectAllNumbers" resultType="PhoneAppVo">
-	List<PhoneAppVo> selectAllNumbers();		// 전체 연락처 조회
+	List<PhoneAppVo> selectAllNumbers();			// 전체 연락처 조회
 	
 //	<select id="selectNumberById" parameterType="Integer" resultType="PhoneAppVo">
-	PhoneAppVo selectNumberById(Integer id);	// 특정 연락처 조회
+	PhoneAppVo selectNumberById(Integer id);		// 특정 연락처 조회
 	
 //	<insert id="insertNumber" parameterType="PhoneAppVo">
-	int insertNumber(PhoneAppVo phoneVo);		//	연락처 추가
+	int insertNumber(PhoneAppVo phoneVo);			//	연락처 추가
 
+//	<update id="updateNumberPartially" parameterType="PhoneAppVo">
+	int updateNumberPartially(PhoneAppVo phoneVo);	//	기존 연락처 수정
+	
 //	<update id="updateNumber" parameterType="PhoneAppVo">
-	int updateNumber(PhoneAppVo phoneVo);		//	연락처 수정
+	int updateNumber(PhoneAppVo phoneVo);			//	연락처 수정
 	
 //	<delete id="deleteNumber" parameterType="int">
-	int deleteNumber(Integer id);
+	int deleteNumber(Integer id);					//	연락처 삭제
 
 //	<select id="selectByName" parameterType="PhoneAppVo" resultType="PhoneAppVo">
-	List<PhoneAppVo> selectByName(String name);
+	List<PhoneAppVo> selectByName(String name);		//	연락처 이름 검색
 	
 //	<select id="selectByPhonenumber" parameterType="PhoneAppVo" resultType="PhoneAppVo">
-	List<PhoneAppVo> selectByPhonenumber(String phoneNumber);
+	List<PhoneAppVo> selectByPhonenumber(String phoneNumber);	//	연락처 전화번호 검색
 }
