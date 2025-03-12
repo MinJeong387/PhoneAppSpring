@@ -20,6 +20,11 @@ public class PhoneAppVo {
 	private String nickname;	// 닉네임
 	private String memo;		// 메모
 	
+	public PhoneAppVo(String name) {
+		super();
+		this.name = name;
+	}
+	
 	public PhoneAppVo(String name, String phone_number, String email, String nickname, String memo) {
 		super();
 		this.name = name;

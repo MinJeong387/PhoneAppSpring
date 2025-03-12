@@ -4,7 +4,7 @@
 <mapper namespace="himedia.phoneappspring.mappers.PhoneAppMapper">
 	<!-- 전체 연락처 조회 -->
 	<select id="selectAllNumbers" resultType="PhoneAppVo"> 
-	SELECT * FROM userInfo ORDER BY name, phone_number 
+	SELECT name FROM userInfo ORDER BY name
 	</select>
 	
 	<!-- 특정 연락처 조회 -->

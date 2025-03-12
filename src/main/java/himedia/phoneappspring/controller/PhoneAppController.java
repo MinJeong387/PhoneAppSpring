@@ -77,14 +77,14 @@ public class PhoneAppController {
 		return ResponseEntity.noContent().build(); // 삭제 후 아무 것도 반환하지 않음
 	}
 	
-	// GET: /api/search/{name} - 연락처 이름 검색하기
+	// GET: /api/search_name/{name} - 연락처 이름 검색하기
     @GetMapping("/search_name/{name}")
     public ResponseEntity<List<PhoneAppVo>> selectByName(@PathVariable String name) {
         List<PhoneAppVo> phoneVo = phoneAppService.selectByName(name);
         return ResponseEntity.ok(phoneVo);
     }
     
-	// GET: /api/search/{phone_number} - 연락처 전화번호 검색하기
+	// GET: /api/search_phone_number/{phone_number} - 연락처 전화번호 검색하기
     @GetMapping("/search_phone_number/{phone_number}")
     public ResponseEntity<List<PhoneAppVo>> selectByPhonenumber(@PathVariable String phone_number) {
         List<PhoneAppVo> phoneVo = phoneAppService.selectByPhonenumber(phone_number);
