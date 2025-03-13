@@ -11,7 +11,7 @@
 	<groupId>com.mini</groupId>
 	<artifactId>PhoneAppSpring</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<!-- packaging>war</packaging -->
 	<name>PhoneAppSpring</name>
 	<description>CommitSpring RESTAPI Server</description>
 	<url/>
@@ -80,6 +80,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>phoneapp</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

@@ -1,4 +1,4 @@
-package himedia.phoneappspring.restserver;
+package himedia.phoneappspring;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
