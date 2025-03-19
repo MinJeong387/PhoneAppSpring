@@ -1,4 +1,4 @@
-package himedia.phoneappspring.restserver;
+package himedia.phoneappspring;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;

@@ -1,7 +1,9 @@
-package himedia.phoneappspring.restserver;
+package himedia.phoneappspring;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+
+import himedia.phoneappspring.restserver.PhoneAppSpringApplication;
 
 public class ServletInitializer extends SpringBootServletInitializer {
 

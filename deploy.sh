@@ -13,4 +13,3 @@ sudo cp target/phoneappspring.war /opt/tomcat/webapps/ || { echo "Failed to copy
 
 # 완료 메시지
 echo "Deployment completed successfully."
-

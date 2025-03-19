@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="himedia.phoneappspring.mappers.PhotoMapper">
+
+	<insert id="insertOrUpdatePhoto" parameterType="photoVo">
+    INSERT INTO photo (file_name, file_path, upload_date, userinfo_id)
+    VALUES (#{fileName}, #{filePath}, #{uploadDate}, #{userinfoId})
+    ON DUPLICATE KEY UPDATE
+        file_name = VALUES(file_name),
+        file_path = VALUES(file_path),
+        upload_date = VALUES(upload_date)
+</insert>
+
+	<!-- RETRIEVE: GET -->
+	<select id="getPhotoById" parameterType="int" resultType="photoVo">
+		SELECT id,
+		file_name as fileName,
+		file_path as filePath,
+		upload_date as uploadDate,
+		userInfo_id as userInfoId
+		FROM photo
+		WHERE id = #{id}
+	</select>
+
+</mapper>	
