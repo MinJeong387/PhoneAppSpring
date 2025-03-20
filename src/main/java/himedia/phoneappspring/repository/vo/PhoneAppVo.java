@@ -19,6 +19,7 @@ public class PhoneAppVo {
 	private String email;		// 이메일
 	private String nickname;	// 닉네임
 	private String memo;		// 메모
+	private String photoUrl; // 새로 추가된 필드
 	
 	public PhoneAppVo(String name) {
 		super();
