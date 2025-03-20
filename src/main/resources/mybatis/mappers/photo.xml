@@ -17,8 +17,7 @@
 		SELECT id,
 		file_name as fileName,
 		file_path as filePath,
-		upload_date as uploadDate,
-		userInfo_id as userInfoId
+		upload_date as uploadDate
 		FROM photo
 		WHERE id = #{id}
 	</select>
