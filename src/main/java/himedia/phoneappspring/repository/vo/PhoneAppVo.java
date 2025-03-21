@@ -1,4 +1,4 @@
-package himedia.hpm_spring.repository.vo;
+package himedia.phoneappspring.repository.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -19,6 +19,7 @@ public class PhoneAppVo {
 	private String email;		// 이메일
 	private String nickname;	// 닉네임
 	private String memo;		// 메모
+	private String photoUrl; // 새로 추가된 필드
 	
 	public PhoneAppVo(String name) {
 		super();

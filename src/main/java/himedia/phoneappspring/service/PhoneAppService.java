@@ -1,18 +1,18 @@
-package himedia.hpm_spring.service;
+package himedia.phoneappspring.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import himedia.hpm_spring.mappers.HPM_SpirngMapper;
-import himedia.hpm_spring.repository.vo.PhoneAppVo;
+import himedia.phoneappspring.mappers.PhoneAppMapper;
+import himedia.phoneappspring.repository.vo.PhoneAppVo;
 
 @Service
 public class PhoneAppService {
 
 	@Autowired
-	private HPM_SpirngMapper phoneAppMapper;
+	private PhoneAppMapper phoneAppMapper;
 
 	// 전체 연락처 조회
 	public List<PhoneAppVo> selectAllNumbers() {
