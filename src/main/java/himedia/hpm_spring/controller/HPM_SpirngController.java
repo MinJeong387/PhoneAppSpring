@@ -1,4 +1,4 @@
-package himedia.phoneappspring.controller;
+package himedia.hpm_spring.controller;
 
 import java.util.List;
 
@@ -14,12 +14,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import himedia.phoneappspring.repository.vo.PhoneAppVo;
-import himedia.phoneappspring.service.PhoneAppService;
+import himedia.hpm_spring.repository.vo.PhoneAppVo;
+import himedia.hpm_spring.service.PhoneAppService;
 
 @RestController
 @RequestMapping("/api/phoneApp")
-public class PhoneAppController {
+public class HPM_SpirngController {
 
 	@Autowired
 	private PhoneAppService phoneAppService;

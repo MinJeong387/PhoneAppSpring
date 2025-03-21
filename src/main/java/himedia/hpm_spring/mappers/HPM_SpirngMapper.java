@@ -1,11 +1,11 @@
-package himedia.phoneappspring.mappers;
+package himedia.hpm_spring.mappers;
 
 import java.util.List;
 
-import himedia.phoneappspring.repository.vo.PhoneAppVo;
+import himedia.hpm_spring.repository.vo.PhoneAppVo;
 
 
-public interface PhoneAppMapper {
+public interface HPM_SpirngMapper {
 
 //	<select id="selectAllNumbers" resultType="PhoneAppVo">
 	List<PhoneAppVo> selectAllNumbers();			// 전체 연락처 조회

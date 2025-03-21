@@ -4,22 +4,33 @@
 <mapper namespace="himedia.phoneappspring.mappers.PhotoMapper">
 
 	<insert id="insertOrUpdatePhoto" parameterType="photoVo">
-    INSERT INTO photo (file_name, file_path, upload_date, userinfo_id)
-    VALUES (#{fileName}, #{filePath}, #{uploadDate}, #{userinfoId})
-    ON DUPLICATE KEY UPDATE
-        file_name = VALUES(file_name),
-        file_path = VALUES(file_path),
-        upload_date = VALUES(upload_date)
-</insert>
+	    INSERT INTO photo (file_name, file_path, upload_date, userinfo_id)
+	    VALUES (#{fileName}, #{filePath}, #{uploadDate}, #{userinfoId})
+	    ON DUPLICATE KEY UPDATE
+	        file_name = VALUES(file_name),
+	        file_path = VALUES(file_path),
+	        upload_date = VALUES(upload_date)
+	</insert>
 
-	<!-- RETRIEVE: GET -->
+	<!-- RETRIEVE: GET PHOTO BY ID -->
 	<select id="getPhotoById" parameterType="int" resultType="photoVo">
 		SELECT id,
-		file_name as fileName,
-		file_path as filePath,
-		upload_date as uploadDate
+		       file_name as fileName,
+		       file_path as filePath,
+		       upload_date as uploadDate
 		FROM photo
 		WHERE id = #{id}
 	</select>
 
-</mapper>	
+	<!-- RETRIEVE: GET PHOTO BY USERINFO ID -->
+	<select id="getPhotoByUserinfoId" parameterType="int" resultType="photoVo">
+		SELECT id,
+		       file_name as fileName,
+		       file_path as filePath,
+		       upload_date as uploadDate,
+		       userinfo_id as userinfoId
+		FROM photo
+		WHERE userinfo_id = #{userinfoId}
+	</select>
+
+</mapper>

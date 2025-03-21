@@ -1,4 +1,4 @@
-package himedia.phoneappspring;
+package himedia.hpm_spring;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -6,13 +6,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@MapperScan(basePackages = "himedia.phoneappspring.mappers")
-@ComponentScan(basePackages = "himedia.phoneappspring")
+@MapperScan(basePackages = "himedia.hpm_spring.mappers")
+@ComponentScan(basePackages = "himedia.hpm_spring")
 
-public class PhoneAppSpringApplication {
+public class HPM_SpinrgApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PhoneAppSpringApplication.class, args);
+		SpringApplication.run(HPM_SpinrgApplication.class, args);
 	}
 
 }
