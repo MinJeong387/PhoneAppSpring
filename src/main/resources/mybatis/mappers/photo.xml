@@ -9,18 +9,20 @@
     ON DUPLICATE KEY UPDATE
         file_name = VALUES(file_name),
         file_path = VALUES(file_path),
-        upload_date = VALUES(upload_date)
+        
+        upload_date = VALUES(upload_date),
+        userinfo_id = VALUES(userinfo_id)
 </insert>
 
 	<!-- RETRIEVE: GET -->
-	<select id="getPhotoById" parameterType="int" resultType="photoVo">
+	<select id="getPhotoByUserinfoId" parameterType="int" resultType="photoVo">
 		SELECT id,
 		file_name as fileName,
 		file_path as filePath,
 		upload_date as uploadDate,
-		userInfo_id as userInfoId
+		userinfo_id as userinfoId
 		FROM photo
-		WHERE id = #{id}
+		WHERE userinfo_id = #{userinfoId}
 	</select>
 
-</mapper>	
+</mapper>

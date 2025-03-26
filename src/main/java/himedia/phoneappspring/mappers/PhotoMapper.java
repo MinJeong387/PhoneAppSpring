@@ -12,5 +12,5 @@ public interface PhotoMapper {
 	void insertOrUpdatePhoto(PhotoVo photo);
 	
 //	<select id="getPhoto" parameterType="int" resultType="photoVo">
-    PhotoVo getPhotoById(Integer id);
+    PhotoVo getPhotoByUserinfoId(Integer id);
 }
